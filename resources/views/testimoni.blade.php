@@ -1,3 +1,12 @@
+@extends('layouts.main')
+
+@section('title')
+    Testimoni
+@endsection
+
+@section('testimoni', 'active')
+
+@section('content')
  <!-- clients -->
  <div class="clients">
     <div class="container-fluid">
@@ -20,12 +29,12 @@
                                <div class="row">
                                   <div class="col-md-12">
                                      <div class="imga">
-                                        <figure><img src="images/client.png" alt="#"/></figure>
+                                        <figure><img src="{{ asset('style/images/client.png')}}" alt="#"/></figure>
                                      </div>
                                      <div class="test_box">
                                         <h4>mark du</h4>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                                        <i><img src="images/toy_img.png" alt="#"/></i>
+                                        <i><img src="{{ asset('style/images/toy_img.png')}}" alt="#"/></i>
                                      </div>
                                   </div>
                                </div>
@@ -38,12 +47,12 @@
                                <div class="row">
                                   <div class="col-md-12">
                                      <div class="imga">
-                                        <figure><img src="images/client.png" alt="#"/></figure>
+                                        <figure><img src="{{ asset('style/images/client.png')}}" alt="#"/></figure>
                                      </div>
                                      <div class="test_box">
                                         <h4>mark du</h4>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                                        <i><img src="images/toy_img.png" alt="#"/></i>
+                                        <i><img src="{{ asset('style/images/toy_img.png')}}" alt="#"/></i>
                                      </div>
                                   </div>
                                </div>
@@ -56,12 +65,12 @@
                                <div class="row">
                                   <div class="col-md-12">
                                      <div class="imga">
-                                        <figure><img src="images/client.png" alt="#"/></figure>
+                                        <figure><img src="{{ asset('style/images/client.png')}}" alt="#"/></figure>
                                      </div>
                                      <div class="test_box">
                                         <h4>mark du</h4>
                                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
-                                        <i><img src="images/toy_img.png" alt="#"/></i>
+                                        <i><img src="{{ asset('style/images/toy_img.png')}}" alt="#"/></i>
                                      </div>
                                   </div>
                                </div>
@@ -82,10 +91,11 @@
           </div>
           <div class="col-md-5">
              <div class="clients_imgfood">
-                <figure><img src="images/food4.png" alt="#"/></figure>
+                <figure><img src="{{ asset('style/images/food4.png')}}" alt="#"/></figure>
              </div>
           </div>
        </div>
     </div>
  </div>
  <!-- end clients -->
+ @endsection

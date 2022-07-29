@@ -5,10 +5,10 @@
           <div class="row">
              <div class="col-md-8 offset-md-2">
                 <div class="cont">
-                   <h3> Free Multipurpose  <br> Responsive Landing Page 2019</h3>
-                   <p>Modern lighting fast & easily Customizable</p>
+                   <h3> Ada Pertanyaan Mengenai <br>  Booking Tempat Wisata</h3>
+                   <p>Silahkan Hubungi Kami</p>
                 </div>
-                <button class="sub_btn" href="#">Get A Quote</button>
+                <a class="sub_btn" href="https://wa.me/6285231404775">Contact Now</a>
              </div>
           </div>
        </div>
@@ -16,7 +16,7 @@
           <div class="container">
              <div class="row">
                 <div class="col-md-12">
-                   <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free Html Templates</a></p>
+                   <p>Copyright 2022 All Right Reserved By <a href="https://www.instagram.com/anjani.dwilestari/"> Anjani Dwilestari</a></p>
                 </div>
              </div>
           </div>

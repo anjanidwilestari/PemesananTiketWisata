@@ -8,7 +8,7 @@
                 <div class="full">
                    <div class="center-desk">
                       <div class="logo">
-                         <a href="index.html"><img src="{{ asset('style/images/logo.png')}}" alt="#" /></a>
+                         <a href="/"><img src="{{ asset('style/images/logo.png')}}" alt="Logo" /></a>
                       </div>
                    </div>
                 </div>
@@ -21,16 +21,19 @@
                    <div class="collapse navbar-collapse" id="navbarsExample04">
                       <ul class="navbar-nav mr-auto">
                          <li class="nav-item">
-                            <a class="nav-link" href="#">About </a>
+                            <a class="nav-link" href="/">Beranda </a>
                          </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="#">Screenshort</a>
+                            <a class="nav-link" href="{{route('tempatwisata.index')}}">Wisata</a>
                          </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/testimoni">Testimoni</a>
+                        </li>
                          <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="{{route('transaksi.create')}}">Pesan</a>
                          </li>
                       </ul>
-                      <div class="Call"><a href="#"> <span class="yellow">Call Us : </span>12345677890</a></div>
+                      <div class="Call"><a href="https://wa.me/6285231404775"> <span class="yellow">Call : </span>085231404775</a></div>
                    </div>
                 </nav>
              </div>
