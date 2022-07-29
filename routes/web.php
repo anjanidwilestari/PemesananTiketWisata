@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TempatWisataController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/history', [HomeController::class, 'indextransaksi'])->name('transaksi.index');
+Route::resource('home', HomeController::class);
+Route::resource('tempatwisata', TempatWisataController::class);
+Route::get('/testimoni', [HomeController::class, 'testimoni'])->name('testimoni');
+Route::get('/transaksi', [HomeController::class, 'createtransaksi'])->name('transaksi.create');
+Route::post('getTransaksi',[HomeController::class,'storetransaksi'])->name('transaksi.store');
+Route::get('/detail/{id}', [HomeController::class, 'showtransaksi'])->name('transaksi.show');
