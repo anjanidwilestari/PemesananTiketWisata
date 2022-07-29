@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('tempat_wisatas', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_tempat');
+            $table->string('deskripsi');
+            $table->string('gambar')->nullable();
+            $table->integer('harga');
             $table->timestamps();
         });
     }

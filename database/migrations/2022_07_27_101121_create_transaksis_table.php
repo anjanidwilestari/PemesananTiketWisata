@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('wisata_id');
+            $table->foreign('wisata_id')->references('id')->on('tempat_wisatas');
+            $table->string('nama_lengkap');
+            $table->string('no_identitas');
+            $table->string('no_hp');
+            $table->date('tanggal_kunjungan');
+            $table->integer('pengunjung_dewasa');
+            $table->integer('pengunjung_anak');
+            $table->integer('harga_tiket')->nullable();
+            $table->integer('total_bayar')->nullable();
             $table->timestamps();
         });
     }

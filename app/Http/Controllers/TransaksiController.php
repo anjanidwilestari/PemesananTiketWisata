@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TempatWisata;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TransaksiController extends Controller
 {
@@ -14,7 +16,7 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
+        return view('transaksi');
     }
 
     /**
@@ -24,7 +26,8 @@ class TransaksiController extends Controller
      */
     public function create()
     {
-        //
+        
+
     }
 
     /**
@@ -35,7 +38,7 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

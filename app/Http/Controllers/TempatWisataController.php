@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\TempatWisata;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\ServiceProvider;
+
 
 class TempatWisataController extends Controller
 {
@@ -12,9 +16,18 @@ class TempatWisataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $pagination = 5;
+        $tempatwisata = TempatWisata::when($request->keyword, function ($query) use ($request) {
+            $query
+                ->where('nama_tempat', 'like', "%{$request->keyword}%")
+                ->where('deskripsi', 'like', "%{$request->keyword}%")
+                ->orWhere('harga', 'like', "%{$request->keyword}%");
+        })->orderBy('id')->paginate($pagination);
+
+        return view('wisata', compact('tempatwisata'))
+            ->with('i', (request()->input('page', 1) - 1) * $pagination);
     }
 
     /**
@@ -24,7 +37,7 @@ class TempatWisataController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
