@@ -42,7 +42,7 @@ class HomeController extends Controller
 
     public function indextransaksi(Request $request)
     {
-        $pagination = 5;
+        $pagination = 15;
         $transaksi = Transaksi::when($request->keyword, function ($query) use ($request) {
             $query
                 ->where('nama_lengkap', 'like', "%{$request->keyword}%")
@@ -55,7 +55,7 @@ class HomeController extends Controller
                 ->orWhereHas('tempatwisata',function(Builder $tempatwisata) use ($request){
                     $tempatwisata->where('nama_tempat','like',"%{$request->keyword}%");
                 });
-        })->orderBy('tanggal_kunjungan')->paginate($pagination);
+        })->orderBy('created_at', 'desc')->paginate($pagination);
 
         return view('history', compact('transaksi'))
             ->with('i', (request()->input('page', 1) - 1) * $pagination);
